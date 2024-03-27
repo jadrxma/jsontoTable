@@ -21,8 +21,8 @@ if uploaded_file is not None:
     
     df = pd.DataFrame.from_records(records)
     
-    # Display the DataFrame as a table in the Streamlit app
-    st.table(df)
+    # Commented out to no longer display the DataFrame as a table
+    # st.table(df)
 
     # Convert DataFrame to CSV
     csv = df.to_csv(index=False).encode('utf-8')
