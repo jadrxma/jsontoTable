@@ -24,3 +24,13 @@ if uploaded_file is not None:
     # Display the DataFrame as a table in the Streamlit app
     st.table(df)
 
+    # Convert DataFrame to CSV
+    csv = df.to_csv(index=False).encode('utf-8')
+
+    # Create download button
+    st.download_button(
+        label="Download data as CSV",
+        data=csv,
+        file_name='json_data.csv',
+        mime='text/csv',
+    )
